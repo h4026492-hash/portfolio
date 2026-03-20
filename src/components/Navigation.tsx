@@ -64,6 +64,18 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             ))}
           </div>
 
+          {/* Download Resume Button */}
+          <a
+            href={`${(import.meta as any).env.BASE_URL}Harshith_Battu_Resume.pdf`}
+            download="Harshith_Battu_Resume.pdf"
+            className="hidden md:flex px-6 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-white font-medium hover:scale-105 transition-transform items-center gap-2"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Resume
+          </a>
+
           {/* Mobile Menu Button */}
           <motion.button
             whileHover={{ scale: 1.1 }}
