@@ -8,7 +8,6 @@ import Contact from './components/Contact'
 import HologramBackground from './components/HologramBackground'
 import FloatingObjects from './components/FloatingObjects'
 import CSS3DCube from './components/CSS3DCube'
-import HandScroller from './components/HandScroller'
 import './App.css'
 
 function App() {
@@ -42,8 +41,6 @@ function App() {
       {/* Navigation */}
       <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
       
-      {/* AI Hand Scroll Controller */}
-      <HandScroller />
 
       {/* Floating Objects */}
       <FloatingObjects />

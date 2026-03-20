@@ -38,34 +38,46 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             Harshith Battu
           </motion.div>
 
-          {/* Nav Items */}
+          {/* Nav Items & Download Resume Button */}
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <motion.button
-                key={item.id}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.id)}
-                className={`relative px-4 py-2 transition-colors ${
-                  activeSection === item.id
-                    ? 'text-white'
-                    : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                {item.label}
-                {activeSection === item.id && (
-                  <motion.div
-                    layoutId="activeSection"
-                    className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full -z-10"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </motion.button>
-            ))}
+            <div className="flex items-center gap-8">
+              {navItems.map((item) => (
+                <motion.button
+                  key={item.id}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`relative px-4 py-2 transition-colors ${
+                    activeSection === item.id
+                      ? 'text-white'
+                      : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  {item.label}
+                  {activeSection === item.id && (
+                    <motion.div
+                      layoutId="activeSection"
+                      className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full -z-10"
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </motion.button>
+              ))}
+            </div>
+
+            <motion.a
+              href="/Harshith_Battu_Resume.pdf"
+              download
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-medium shadow-lg hover:shadow-indigo-500/25 transition-all"
+            >
+              <span>Resume</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </motion.a>
           </div>
-
-
-
           {/* Mobile Menu Button */}
           <motion.button
             whileHover={{ scale: 1.1 }}
