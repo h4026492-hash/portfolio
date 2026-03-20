@@ -59,19 +59,7 @@ export default function About() {
               I transform concepts into immersive digital realities, ensuring every interaction 
               feels fluid and every pixel has a purpose.
             </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block pt-4"
-            >
-              <a 
-                href={`${(import.meta as any).env.BASE_URL}Harshith_Battu_Resume.pdf`}
-                download="Harshith_Battu_Resume.pdf"
-                className="inline-block px-10 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white font-bold shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transition-all cursor-pointer"
-              >
-                Download Resume
-              </a>
-            </motion.div>
+
           </motion.div>
 
           {/* Right - Interactive Stats Cards */}
